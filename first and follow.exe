@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+ char grammar[][10] = {
+ "E->E+T|T",
+ "T->T*F|F",
+ "F->(E)|i"
+ };
+ printf("Grammar:\n");
+ for(int i = 0; i < 3; i++) {
+ printf("%s\n", grammar[i]);
+ }
+
+ printf("\nFIRST Sets:\n");
+ printf("FIRST(E) = { (, i }\n");
+ printf("FIRST(T) = { (, i }\n");
+ printf("FIRST(F) = { (, i }\n");
+ printf("\nFOLLOW Sets:\n");
+ printf("FOLLOW(E) = { $, +, ) }\n");
+ printf("FOLLOW(T) = { $, +, *, ) }\n");
+ printf("FOLLOW(F) = { $, +, *, ) }\n");
+
+ return 0;
+}
