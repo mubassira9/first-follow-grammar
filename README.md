@@ -12,14 +12,14 @@ These are essential for building:
 
 ## Program Output
 ### Grammar
-E → E + T | T
-T → T * F | F
-F → ( E ) | i
+E → E + T | T  
+T → T * F | F  
+F → ( E ) | i  
 ### FIRST Sets
-FIRST(E) = { (, i }
-FIRST(T) = { (, i }
-FIRST(F) = { (, i }
+FIRST(E) = { (, i }  
+FIRST(T) = { (, i }  
+FIRST(F) = { (, i }  
 ### FOLLOW Sets
-FOLLOW(E) = { $, +, ) }
-FOLLOW(T) = { $, +, *, ) }
-FOLLOW(F) = { $, +, *, ) }
+FOLLOW(E) = { $, +, ) }    
+FOLLOW(T) = { $, +, *, ) }   
+FOLLOW(F) = { $, +, *, ) }   
